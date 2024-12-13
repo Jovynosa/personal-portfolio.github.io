@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: hwb(189 71% 7%);
+}
+
+.container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
+
+header {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  left: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header .logo {
+  color: #1f71a1;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #1f71a1;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background-color: aliceblue;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  transform: translateX(0);
+  max-width: 700px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  padding-left: 110px;
+}
+
+.content h2 {
+  padding-bottom: 10px;
+  font-size: 3em;
+  color: #1f71a1;
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #1f71a1;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #1f71a1;
+}
+
+.icon {
+  position: absolute;
+  right: -25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon li {
+  list-style: none;
+}
+
+.icon li a {
+  text-decoration: none;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 5px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.icon li a img {
+  width: 30px;
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+.icon li:hover a img {
+  transform: scale(0.7) rotate(300deg);
+}
+
+/* Responsive Design for screens smaller than 992px */
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content {
+    max-width: 100%;
+    margin-top: -20px;
+    padding: 30px;
+    padding-left: 30px;
+  }
+
+  header {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    top: -40px;
+    padding: 20px;
+    right: 0;
+    left: 0;
+  }
+
+  .icon {
+    position: relative;
+    flex-direction: row;
+    left: 0;
+  }
+}
+
+/* Responsive Design for smaller devices (phones) */
+@media screen and (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+  }
+
+  header {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .icon {
+    position: relative;
+    flex-direction: row;
+    left: 0;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .icon li a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon li a img {
+    width: 25px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header ul li {
+    margin: 10px 0;
+  }
+}
